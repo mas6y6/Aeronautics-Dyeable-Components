@@ -1,14 +1,14 @@
-package com.example.examplemod;
+package com.fusionflux.dyedlevitite;
 
-import com.example.examplemod.montent.DyedLevititeBlendContextRegister;
-import com.example.examplemod.montent.DyedLevititeBlockRegister;
+import com.fusionflux.dyedlevitite.montent.DyedLevititeBlendContextRegister;
+import com.fusionflux.dyedlevitite.montent.DyedLevititeBlockRegister;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
 @Mod(DyedLevitite.ID)
 public class DyedLevitite {
-    public static final String ID = "examplemod";
+    public static final String ID = "dyedlevitite";
 
     public DyedLevitite(IEventBus bus) {
         DyedLevititeBlendContextRegister.REGISTER.register(bus);

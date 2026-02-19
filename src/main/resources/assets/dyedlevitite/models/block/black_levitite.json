@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "examplemod:block/black_levitite"
+    "all": "dyedlevitite:block/black_levitite"
   }
 }

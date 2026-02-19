@@ -1,14 +1,9 @@
-package com.example.examplemod.montent;
+package com.fusionflux.dyedlevitite.montent;
 
-import com.example.examplemod.DyedLevitite;
+import com.fusionflux.dyedlevitite.DyedLevitite;
 import com.simibubi.create.foundation.block.connected.AllCTTypes;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.CTSpriteShifter;
-import com.simibubi.create.foundation.block.connected.ConnectedTextureBehaviour;
-import dev.eriksonn.aeronautics.AeronauticsClient;
-import dev.eriksonn.aeronautics.config.client.AeroClient;
-import dev.eriksonn.aeronautics.index.AeroSpriteShift;
-import net.createmod.catnip.render.SpriteShiftEntry;
 import net.minecraft.Util;
 import net.minecraft.world.item.DyeColor;
 

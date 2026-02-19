@@ -1,4 +1,4 @@
-package com.example.examplemod.montent;
+package com.fusionflux.dyedlevitite.montent;
 
 
 import com.simibubi.create.AllSpriteShifts;

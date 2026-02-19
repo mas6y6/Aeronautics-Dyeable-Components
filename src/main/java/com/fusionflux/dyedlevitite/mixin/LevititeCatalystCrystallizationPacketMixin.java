@@ -1,10 +1,9 @@
-package com.example.examplemod.mixin;
+package com.fusionflux.dyedlevitite.mixin;
 
-import com.example.examplemod.montent.DyedLevititeBlendContextRegister;
+import com.fusionflux.dyedlevitite.montent.DyedLevititeBlendContextRegister;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import dev.eriksonn.aeronautics.api.levitite_blend_crystallization.CrystalPropagationContext;
 import dev.eriksonn.aeronautics.network.packets.LevititeCatalystCrystallizationPacket;
-import foundry.veil.api.network.handler.PacketContext;
 import foundry.veil.api.network.handler.ServerPacketContext;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -16,7 +15,6 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(LevititeCatalystCrystallizationPacket.class)
 public class LevititeCatalystCrystallizationPacketMixin {

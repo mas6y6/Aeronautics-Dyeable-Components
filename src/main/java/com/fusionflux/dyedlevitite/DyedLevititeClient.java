@@ -1,11 +1,10 @@
-package com.example.examplemod;
+package com.fusionflux.dyedlevitite;
 
-import com.example.examplemod.montent.DyedLevititeBlockRegister;
-import com.example.examplemod.montent.DyedLevititeSpriteShift;
+import com.fusionflux.dyedlevitite.montent.DyedLevititeBlockRegister;
+import com.fusionflux.dyedlevitite.montent.DyedLevititeSpriteShift;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.createmod.catnip.render.SpriteShiftEntry;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;

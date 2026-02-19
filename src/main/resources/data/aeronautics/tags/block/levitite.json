@@ -1,9 +1,9 @@
 {
   "values": [
-    "examplemod:black_levitite",
-    "examplemod:red_levitite",
-    "examplemod:blue_levitite",
-    "examplemod:yellow_levitite",
-    "examplemod:green_levitite"
+    "dyedlevitite:black_levitite",
+    "dyedlevitite:red_levitite",
+    "dyedlevitite:blue_levitite",
+    "dyedlevitite:yellow_levitite",
+    "dyedlevitite:green_levitite"
   ]
 }

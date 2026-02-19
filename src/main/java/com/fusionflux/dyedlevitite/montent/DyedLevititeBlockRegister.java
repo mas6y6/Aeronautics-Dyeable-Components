@@ -1,6 +1,6 @@
-package com.example.examplemod.montent;
+package com.fusionflux.dyedlevitite.montent;
 
-import com.example.examplemod.DyedLevitite;
+import com.fusionflux.dyedlevitite.DyedLevitite;
 import dev.eriksonn.aeronautics.index.AeroBlocks;
 import net.minecraft.Util;
 import net.minecraft.world.item.DyeColor;
