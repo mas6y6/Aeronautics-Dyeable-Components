@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+#issueTrackerURL = "https://change.me.to.your.issue.tracker.example.invalid/"
+
+[[mods]]
+modId = "examplemod"
+version = "${version}"
+displayName = "Example Mod"
+#logoFile = "examplemod.png"
+#credits = ""
+authors = "Me!"
+description = '''
+h
+'''
+
+[[mixins]]
+config = "examplemod.mixins.json"
+
+[[dependencies.examplemod]]
+    modId = "neoforge"
+    type = "required"
+    versionRange = "[${neo_version},)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.examplemod]]
+    modId = "minecraft"
+    type = "required"
+    versionRange = "[${minecraft_version}]"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.examplemod]]
+modId = "aeronautics"
+type = "required"
+#versionRange = "[${minecraft_version}]"
+ordering = "AFTER"
+side = "BOTH"

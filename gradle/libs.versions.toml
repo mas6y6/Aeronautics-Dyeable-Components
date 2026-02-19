@@ -1,0 +1,12 @@
+[versions]
+minecraft = "1.21.1"
+mdg = "2.0.+"
+neoforge = "21.1.219"
+parchment = "2024.11.17"
+
+[libraries]
+
+[bundles]
+
+[plugins]
+mdg = { id = "net.neoforged.moddev", version.ref = "mdg" }
