@@ -5,6 +5,7 @@ import com.fusionflux.dyedlevitite.montent.DyedLevititeSpriteShift;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import dev.eriksonn.aeronautics.Aeronautics;
 import dev.eriksonn.aeronautics.AeronauticsClient;
 import dev.eriksonn.aeronautics.index.client.AeroRenderTypes;
 import dev.eriksonn.aeronautics.neoforge.events.AeroNeoForgeClientEvents;
