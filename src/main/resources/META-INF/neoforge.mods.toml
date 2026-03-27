@@ -4,7 +4,7 @@ license = "MIT"
 #issueTrackerURL = "https://change.me.to.your.issue.tracker.example.invalid/"
 
 [[mods]]
-modId = "dyedlevitite"
+modId = "dyeable_levitite"
 version = "${version}"
 displayName = "Dyed Levitite"
 #logoFile = "examplemod.png"
@@ -15,23 +15,23 @@ h
 '''
 
 [[mixins]]
-config = "dyedlevitite.mixins.json"
+config = "dyeable_levitite.mixins.json"
 
-[[dependencies.dyedlevitite]]
+[[dependencies.dyeable_levitite]]
     modId = "neoforge"
     type = "required"
     versionRange = "[${neo_version},)"
     ordering = "NONE"
     side = "BOTH"
 
-[[dependencies.dyedlevitite]]
+[[dependencies.dyeable_levitite]]
     modId = "minecraft"
     type = "required"
     versionRange = "[${minecraft_version}]"
     ordering = "NONE"
     side = "BOTH"
 
-[[dependencies.dyedlevitite]]
+[[dependencies.dyeable_levitite]]
 modId = "aeronautics"
 type = "required"
 #versionRange = "[${minecraft_version}]"

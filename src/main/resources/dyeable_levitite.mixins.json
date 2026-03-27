@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.fusionflux.dyeable_levitite.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "mixins": [
+    "LevititeCatalystCrystallizationPacketMixin"
+  ]
+}

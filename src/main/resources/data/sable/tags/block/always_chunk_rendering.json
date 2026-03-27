@@ -1,21 +1,21 @@
 {
   "values": [
-    "dyedlevitite:black_levitite",
-    "dyedlevitite:red_levitite",
-    "dyedlevitite:blue_levitite",
-    "dyedlevitite:yellow_levitite",
-    "dyedlevitite:green_levitite",
-    "dyedlevitite:white_levitite",
-    "dyedlevitite:orange_levitite",
-    "dyedlevitite:light_blue_levitite",
-    "dyedlevitite:purple_levitite",
-    "dyedlevitite:purple_levitite",
-    "dyedlevitite:brown_levitite",
-    "dyedlevitite:lime_levitite",
-    "dyedlevitite:light_gray_levitite",
-    "dyedlevitite:gray_levitite",
-    "dyedlevitite:magenta_levitite",
-    "dyedlevitite:cyan_levitite",
-    "dyedlevitite:pink_levitite"
+    "dyeable_levitite:black_levitite",
+    "dyeable_levitite:red_levitite",
+    "dyeable_levitite:blue_levitite",
+    "dyeable_levitite:yellow_levitite",
+    "dyeable_levitite:green_levitite",
+    "dyeable_levitite:white_levitite",
+    "dyeable_levitite:orange_levitite",
+    "dyeable_levitite:light_blue_levitite",
+    "dyeable_levitite:purple_levitite",
+    "dyeable_levitite:purple_levitite",
+    "dyeable_levitite:brown_levitite",
+    "dyeable_levitite:lime_levitite",
+    "dyeable_levitite:light_gray_levitite",
+    "dyeable_levitite:gray_levitite",
+    "dyeable_levitite:magenta_levitite",
+    "dyeable_levitite:cyan_levitite",
+    "dyeable_levitite:pink_levitite"
   ]
 }

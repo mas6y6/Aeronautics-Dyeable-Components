@@ -23,7 +23,7 @@ neoForge {
         minecraftVersion = libs.versions.minecraft.get()
     }
 
-    mods.register("examplemod") {
+    mods.register("dyeable_levitite") {
         sourceSet(sourceSets.main.get())
     }
 
