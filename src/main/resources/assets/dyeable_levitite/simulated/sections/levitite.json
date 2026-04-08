@@ -1,0 +1,9 @@
+{
+  "priority": 10000,
+  "title": {
+    "text": { "translate": "dyeable_levitite.simulated_section.levitite" },
+    "background": "#FFFFFF"
+  },
+  "sprite": "dyeable_levitite:levitie_section_banner",
+  "only_animate_on_hover": true
+}

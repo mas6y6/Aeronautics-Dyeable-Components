@@ -6,24 +6,20 @@ import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import dev.eriksonn.aeronautics.registry.AeroRegistrate;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
+import java.util.List;
+
 @Mod(DyedLevitite.ID)
 public class DyedLevitite {
-
-
-
     public static final String ID = "dyeable_levitite";
-
-    private static final NonNullSupplier<AeroRegistrate> REGISTRATE = NonNullSupplier.lazy(() -> (AeroRegistrate)(new AeroRegistrate(id(ID), ID)).defaultCreativeTab((ResourceKey)null));
-
 
     public DyedLevitite(IEventBus bus) {
         DyedLevititeBlendContextRegister.REGISTER.register(bus);
         DyedLevititeBlockRegister.REGISTER.register(bus);
         DyedLevititeBlockRegister.REGISTER_ITEMS.register(bus);
-        DyedLevititeBlockRegister. CREATIVE_MODE_TABS.register(bus);
     }
 
 
