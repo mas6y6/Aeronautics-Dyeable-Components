@@ -35,7 +35,7 @@ public class LevititeCatalystCrystallizationPacketMixin {
 
         if (itemInOffHand.getItem() instanceof DyeItem dyeItem) {
             DyeColor dyeColor = dyeItem.getDyeColor();
-            return DyeableComponentsCrystalPropagationContexts.DYED_CONTEXT.get(dyeColor).value();
+            return DyeableComponentsCrystalPropagationContexts.DYED_CONTEXTS.get(dyeColor).value();
         }
 
         return original;

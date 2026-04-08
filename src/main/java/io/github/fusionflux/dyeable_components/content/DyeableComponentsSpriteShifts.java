@@ -11,12 +11,9 @@ import java.util.EnumMap;
 import java.util.Map;
 
 public class DyeableComponentsSpriteShifts {
-    public static final Map<DyeColor, CTSpriteShiftEntry> DYED_SPRITE_SHIFTS = Util.make(new EnumMap<>(DyeColor.class), map -> {
-        for (DyeColor color : DyeColor.values()) {
-            CTSpriteShiftEntry omni = omni("block/" + color.getSerializedName() + "_levitite");
-            map.put(color, omni);
-        }
-    });
+    public static final Map<DyeColor, CTSpriteShiftEntry> DYED_SPRITE_SHIFTS = DyeableComponents.colorMap(
+            color -> omni("block/" + color.getSerializedName() + "_levitite")
+    );
 
     static CTSpriteShiftEntry omni(String name) {
         return CTSpriteShifter.getCT(AllCTTypes.OMNIDIRECTIONAL, DyeableComponents.id(name),  DyeableComponents.id(name + "_connected"));

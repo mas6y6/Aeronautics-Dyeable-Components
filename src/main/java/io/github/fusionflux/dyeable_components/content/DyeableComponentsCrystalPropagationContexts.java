@@ -14,13 +14,10 @@ import java.util.Map;
 public class DyeableComponentsCrystalPropagationContexts {
     public static final DeferredRegister<CrystalPropagationContext> REGISTER = DeferredRegister.create(AeroRegistries.Keys.LEVITITE_CRYSTAL_PROPAGATION_CONTEXT, DyeableComponents.ID);
 
-    public static final Map<DyeColor, DeferredHolder<CrystalPropagationContext, DyedLevititePropagationContext>> DYED_CONTEXT = Util.make(new EnumMap<>(DyeColor.class), map -> {
-        for (DyeColor color : DyeColor.values()) {
-            DeferredHolder<CrystalPropagationContext, DyedLevititePropagationContext> context = REGISTER.register(
+    public static final Map<DyeColor, DeferredHolder<CrystalPropagationContext, DyedLevititePropagationContext>> DYED_CONTEXTS = DyeableComponents.colorMap(
+            color -> REGISTER.register(
                     color.getSerializedName() + "_crystal_context",
                     () -> new DyedLevititePropagationContext(DyeableComponentsBlocks.DYED_LEVITITE_BLOCKS.get(color))
-            );
-            map.put(color, context);
-        }
-    });
+            )
+    );
 }

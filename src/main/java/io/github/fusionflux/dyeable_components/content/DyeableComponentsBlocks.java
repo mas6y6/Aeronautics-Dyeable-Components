@@ -20,41 +20,29 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.*;
 
 public class DyeableComponentsBlocks {
-    public static final List<DyeColor> CREATIVE_TAB_COLOR_ORDER = List.of(
-            DyeColor.WHITE, DyeColor.LIGHT_GRAY, DyeColor.GRAY, DyeColor.BLACK,
-            DyeColor.BROWN, DyeColor.RED, DyeColor.ORANGE, DyeColor.YELLOW,
-            DyeColor.LIME, DyeColor.GREEN, DyeColor.CYAN, DyeColor.LIGHT_BLUE,
-            DyeColor.BLUE, DyeColor.PURPLE, DyeColor.MAGENTA, DyeColor.PINK
-    );
-
     public static final ResourceLocation DYED_LEVITITE_TAB_SECTION = DyeableComponents.id("levitite");
 
-    public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(DyeableComponents.ID);
-    public static final DeferredRegister.Items REGISTER_ITEMS = DeferredRegister.createItems(DyeableComponents.ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(DyeableComponents.ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(DyeableComponents.ID);
 
-    public static final Map<DyeColor, DeferredBlock<Block>> DYED_LEVITITE_BLOCKS = Util.make(new EnumMap<>(DyeColor.class), map -> {
-        for (DyeColor color : CREATIVE_TAB_COLOR_ORDER) {
-            DeferredBlock<Block> holder = REGISTER.register(color.getSerializedName() + "_levitite",()->{
+    public static final Map<DyeColor, DeferredBlock<Block>> DYED_LEVITITE_BLOCKS = DyeableComponents.colorMap(
+            color -> BLOCKS.register(color.getSerializedName() + "_levitite", () -> {
                 BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(AeroBlocks.LEVITITE.get());
                 return new Block(properties);
-            });
-            map.put(color, holder);
-        }
-    });
+            })
+    );
 
-    public static final Map<DyeColor, DeferredItem<Item>> DYED_LEVITITE_ITEMS = Util.make(new EnumMap<>(DyeColor.class), map -> {
-        for (DyeColor color : CREATIVE_TAB_COLOR_ORDER) {
-            LevititeSparklePartcleData particleData = new LevititeSparklePartcleData(color.getTextureDiffuseColor());
-            Levitating levitating = new Levitating(0.93f, Optional.of(particleData));
+    public static final Map<DyeColor, DeferredItem<Item>> DYED_LEVITITE_ITEMS = DyeableComponents.colorMap(color -> {
+        LevititeSparklePartcleData particleData = new LevititeSparklePartcleData(color.getTextureDiffuseColor());
+        Levitating levitating = new Levitating(0.93f, Optional.of(particleData));
 
-            DeferredItem<Item> holder = REGISTER_ITEMS.register(color.getSerializedName() + "_levitite", () -> new BlockItem(
-                    DYED_LEVITITE_BLOCKS.get(color).get(),
-                    new Item.Properties().component(AeroDataComponents.LEVITATING, levitating)
-            ));
+        DeferredItem<Item> holder = ITEMS.register(color.getSerializedName() + "_levitite", () -> new BlockItem(
+                DYED_LEVITITE_BLOCKS.get(color).get(),
+                new Item.Properties().component(AeroDataComponents.LEVITATING, levitating)
+        ));
 
-            map.put(color, holder);
-            SimulatedRegistrate.TAB_ITEMS.add(holder::value);
-            SimulatedRegistrate.ITEM_TO_SECTION.put(holder.getId(), DYED_LEVITITE_TAB_SECTION);
-        }
+        SimulatedRegistrate.TAB_ITEMS.add(holder::value);
+        SimulatedRegistrate.ITEM_TO_SECTION.put(holder.getId(), DYED_LEVITITE_TAB_SECTION);
+        return holder;
     });
 }
