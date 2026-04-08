@@ -14,7 +14,7 @@ public class DyedLevititeSpriteShift {
 
     public static final Map<DyeColor, CTSpriteShiftEntry> DYED_SPRITE_SHIFTS = Util.make(new EnumMap<>(DyeColor.class), map -> {
         for (DyeColor color : DyeColor.values()) {
-            CTSpriteShiftEntry omni = omni(color.getSerializedName() + "_levitite");
+            CTSpriteShiftEntry omni = omni("block/" + color.getSerializedName() + "_levitite");
             map.put(color,omni);
         }
     });
