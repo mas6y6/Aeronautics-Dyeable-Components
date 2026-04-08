@@ -1,6 +1,6 @@
 package com.fusionflux.dyeable_levitite;
 
-import com.fusionflux.dyeable_levitite.montent.DyedLevititeBlockRegister;
+import com.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
 import dev.eriksonn.aeronautics.events.AeronauticsClientEvents;
 import dev.eriksonn.aeronautics.index.client.AeroRenderTypes;
 import foundry.veil.forge.event.ForgeVeilRegisterBlockLayersEvent;
@@ -8,6 +8,7 @@ import foundry.veil.forge.event.ForgeVeilRegisterFixedBuffersEvent;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -16,12 +17,8 @@ import net.neoforged.neoforge.client.ChunkRenderTypeSet;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 
-@EventBusSubscriber(
-        modid = "dyeable_levitite",
-        value = {Dist.CLIENT}
-)
+@EventBusSubscriber(modid = DyedLevitite.ID, value = Dist.CLIENT)
 public class DyedLevititeClientEvents {
-
     @SubscribeEvent
     public static void preClientTick(ClientTickEvent.Pre event) {
         AeronauticsClientEvents.clientLevelTick(false);
@@ -32,17 +29,13 @@ public class DyedLevititeClientEvents {
         AeronauticsClientEvents.clientLevelTick(true);
     }
 
-
-    @EventBusSubscriber(
-            modid = "dyeable_levitite",
-            value = {Dist.CLIENT}
-    )
+    @EventBusSubscriber(modid = DyedLevitite.ID, value = Dist.CLIENT)
     public static class ModBusEvents {
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent event) {
-            final ChunkRenderTypeSet set = ChunkRenderTypeSet.of(RenderType.SOLID, AeroRenderTypes.levitite(), AeroRenderTypes.levititeGhosts());
+            ChunkRenderTypeSet set = ChunkRenderTypeSet.of(RenderType.SOLID, AeroRenderTypes.levitite(), AeroRenderTypes.levititeGhosts());
             for (DyeColor color : DyeColor.values()) {
-                ItemBlockRenderTypes.setRenderLayer(DyedLevititeBlockRegister.DYED_LEVITITE.get(color).get(), set);
+                setRenderTypes(DyedLevititeBlocks.DYED_LEVITITE_BLOCKS.get(color).get(), set);
             }
         }
 
@@ -58,10 +51,9 @@ public class DyedLevititeClientEvents {
             event.register(RenderLevelStageEvent.Stage.AFTER_WEATHER, AeroRenderTypes.levititeGhosts());
         }
 
-        //@SubscribeEvent
-        //public static void registerRegisterStageEvent(RenderLevelStageEvent.RegisterStageEvent event) {
-        //    event.register(Aeronautics.path("levitite"), AeroRenderTypes.levitite());
-        //    event.register(Aeronautics.path("levitite_ghosts"), AeroRenderTypes.levitite_ghosts());
-        //}
+        @SuppressWarnings("deprecation") // not really deprecated
+        private static void setRenderTypes(Block block, ChunkRenderTypeSet set) {
+            ItemBlockRenderTypes.setRenderLayer(block, set);
+        }
     }
 }

@@ -1,7 +1,7 @@
 package com.fusionflux.dyeable_levitite;
 
-import com.fusionflux.dyeable_levitite.montent.DyedLevititeBlockRegister;
-import com.fusionflux.dyeable_levitite.montent.DyedLevititeSpriteShift;
+import com.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
+import com.fusionflux.dyeable_levitite.content.DyedLevititeSpriteShifts;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -13,23 +13,21 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-@Mod(value = DyedLevitite.ID,dist = Dist.CLIENT)
+@Mod(value = DyedLevitite.ID, dist = Dist.CLIENT)
 public class DyedLevititeClient {
-
-    public DyedLevititeClient(IEventBus bus){
+    public DyedLevititeClient(IEventBus bus) {
         bus.addListener(DyedLevititeClient::onInit);
     }
 
-    public static void onInit(FMLCommonSetupEvent event){
+    public static void onInit(FMLCommonSetupEvent event) {
         for (DyeColor color : DyeColor.values()) {
-            DeferredBlock<Block> block = DyedLevititeBlockRegister.DYED_LEVITITE.get(color);
-            CTSpriteShiftEntry ctSpriteShiftEntry = DyedLevititeSpriteShift.DYED_SPRITE_SHIFTS.get(color);
-            registerCT(block.get(),ctSpriteShiftEntry);
+            DeferredBlock<Block> block = DyedLevititeBlocks.DYED_LEVITITE_BLOCKS.get(color);
+            CTSpriteShiftEntry entry = DyedLevititeSpriteShifts.DYED_SPRITE_SHIFTS.get(color);
+            registerCT(block.get(), entry);
         }
     }
 
-    private static void registerCT(Block block, CTSpriteShiftEntry spriteShiftEntry){
-        CreateRegistrate.connectedTextures(()->new SimpleCTBehaviour(spriteShiftEntry)).accept(block);
+    private static void registerCT(Block block, CTSpriteShiftEntry entry) {
+        CreateRegistrate.connectedTextures(() -> new SimpleCTBehaviour(entry)).accept(block);
     }
-
 }
