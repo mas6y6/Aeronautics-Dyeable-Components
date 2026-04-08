@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.fusionflux.dyeable_levitite.mixin",
+  "package": "io.github.fusionflux.dyeable_levitite.mixin",
   "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1

@@ -1,6 +1,6 @@
-package com.fusionflux.dyeable_levitite;
+package io.github.fusionflux.dyeable_levitite;
 
-import com.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
+import io.github.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
 import dev.eriksonn.aeronautics.events.AeronauticsClientEvents;
 import dev.eriksonn.aeronautics.index.client.AeroRenderTypes;
 import foundry.veil.forge.event.ForgeVeilRegisterBlockLayersEvent;

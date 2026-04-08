@@ -1,6 +1,6 @@
-package com.fusionflux.dyeable_levitite.content;
+package io.github.fusionflux.dyeable_levitite.content;
 
-import com.fusionflux.dyeable_levitite.DyedLevitite;
+import io.github.fusionflux.dyeable_levitite.DyedLevitite;
 import com.simibubi.create.foundation.block.connected.AllCTTypes;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.CTSpriteShifter;

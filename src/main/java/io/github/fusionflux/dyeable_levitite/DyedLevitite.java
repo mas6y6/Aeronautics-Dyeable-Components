@@ -1,7 +1,7 @@
-package com.fusionflux.dyeable_levitite;
+package io.github.fusionflux.dyeable_levitite;
 
-import com.fusionflux.dyeable_levitite.content.CrystalPropagationContexts;
-import com.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
+import io.github.fusionflux.dyeable_levitite.content.CrystalPropagationContexts;
+import io.github.fusionflux.dyeable_levitite.content.DyedLevititeBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

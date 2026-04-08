@@ -1,4 +1,4 @@
-package com.fusionflux.dyeable_levitite.content;
+package io.github.fusionflux.dyeable_levitite.content;
 
 
 import dev.eriksonn.aeronautics.api.levitite_blend_crystallization.CrystalPropagationContext;

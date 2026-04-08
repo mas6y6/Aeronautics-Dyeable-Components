@@ -1,6 +1,6 @@
-package com.fusionflux.dyeable_levitite.mixin;
+package io.github.fusionflux.dyeable_levitite.mixin;
 
-import com.fusionflux.dyeable_levitite.content.CrystalPropagationContexts;
+import io.github.fusionflux.dyeable_levitite.content.CrystalPropagationContexts;
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import dev.eriksonn.aeronautics.api.levitite_blend_crystallization.CrystalPropagationContext;
 import dev.eriksonn.aeronautics.network.packets.LevititeCatalystCrystallizationPacket;

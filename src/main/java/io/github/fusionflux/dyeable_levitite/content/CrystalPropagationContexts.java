@@ -1,6 +1,6 @@
-package com.fusionflux.dyeable_levitite.content;
+package io.github.fusionflux.dyeable_levitite.content;
 
-import com.fusionflux.dyeable_levitite.DyedLevitite;
+import io.github.fusionflux.dyeable_levitite.DyedLevitite;
 import dev.eriksonn.aeronautics.api.levitite_blend_crystallization.CrystalPropagationContext;
 import dev.eriksonn.aeronautics.index.AeroRegistries;
 import net.minecraft.Util;
