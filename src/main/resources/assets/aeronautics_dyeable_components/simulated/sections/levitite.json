@@ -1,0 +1,9 @@
+{
+  "priority": 10000,
+  "title": {
+    "text": { "translate": "aeronautics_dyeable_components.simulated_section.levitite" },
+    "background": "#FFFFFF"
+  },
+  "sprite": "aeronautics_dyeable_components:levitie_section_banner",
+  "only_animate_on_hover": true
+}

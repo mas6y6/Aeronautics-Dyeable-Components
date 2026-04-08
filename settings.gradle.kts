@@ -1,4 +1,4 @@
-rootProject.name = "dyeable_levitite"
+rootProject.name = "dyeable-components"
 
 pluginManagement {
     repositories {
@@ -9,4 +9,3 @@ pluginManagement {
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
-

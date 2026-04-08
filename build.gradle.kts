@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.mdg)
 }
 
-group = "com.example"
+group = "io.github.fusionflux"
 version = "1.0.0+mc${libs.versions.minecraft.get()}"
 
 repositories {
@@ -23,7 +23,7 @@ neoForge {
         minecraftVersion = libs.versions.minecraft.get()
     }
 
-    mods.register("dyeable_levitite") {
+    mods.register("aeronautics_dyeable_components") {
         sourceSet(sourceSets.main.get())
     }
 

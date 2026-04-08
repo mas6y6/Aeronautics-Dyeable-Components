@@ -4,9 +4,9 @@ license = "MIT"
 #issueTrackerURL = "https://change.me.to.your.issue.tracker.example.invalid/"
 
 [[mods]]
-modId = "dyeable_levitite"
+modId = "aeronautics_dyeable_components"
 version = "${version}"
-displayName = "Dyed Levitite"
+displayName = "Create Aeronautics: Dyeable Components"
 #logoFile = "examplemod.png"
 #credits = ""
 authors = "Me!"
@@ -15,23 +15,23 @@ h
 '''
 
 [[mixins]]
-config = "dyeable_levitite.mixins.json"
+config = "aeronautics_dyeable_components.mixins.json"
 
-[[dependencies.dyeable_levitite]]
+[[dependencies.aeronautics_dyeable_components]]
     modId = "neoforge"
     type = "required"
     versionRange = "[${neo_version},)"
     ordering = "NONE"
     side = "BOTH"
 
-[[dependencies.dyeable_levitite]]
+[[dependencies.aeronautics_dyeable_components]]
     modId = "minecraft"
     type = "required"
     versionRange = "[${minecraft_version}]"
     ordering = "NONE"
     side = "BOTH"
 
-[[dependencies.dyeable_levitite]]
+[[dependencies.aeronautics_dyeable_components]]
 modId = "aeronautics"
 type = "required"
 #versionRange = "[${minecraft_version}]"

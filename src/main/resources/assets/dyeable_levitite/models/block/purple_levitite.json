@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "dyeable_levitite:block/purple_levitite"
-  }
-}

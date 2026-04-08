@@ -1,21 +1,21 @@
 {
   "values": [
-    "dyeable_levitite:black_levitite",
-    "dyeable_levitite:red_levitite",
-    "dyeable_levitite:blue_levitite",
-    "dyeable_levitite:yellow_levitite",
-    "dyeable_levitite:green_levitite",
-    "dyeable_levitite:white_levitite",
-    "dyeable_levitite:orange_levitite",
-    "dyeable_levitite:light_blue_levitite",
-    "dyeable_levitite:purple_levitite",
-    "dyeable_levitite:purple_levitite",
-    "dyeable_levitite:brown_levitite",
-    "dyeable_levitite:lime_levitite",
-    "dyeable_levitite:light_gray_levitite",
-    "dyeable_levitite:gray_levitite",
-    "dyeable_levitite:magenta_levitite",
-    "dyeable_levitite:cyan_levitite",
-    "dyeable_levitite:pink_levitite"
+    "aeronautics_dyeable_components:black_levitite",
+    "aeronautics_dyeable_components:red_levitite",
+    "aeronautics_dyeable_components:blue_levitite",
+    "aeronautics_dyeable_components:yellow_levitite",
+    "aeronautics_dyeable_components:green_levitite",
+    "aeronautics_dyeable_components:white_levitite",
+    "aeronautics_dyeable_components:orange_levitite",
+    "aeronautics_dyeable_components:light_blue_levitite",
+    "aeronautics_dyeable_components:purple_levitite",
+    "aeronautics_dyeable_components:purple_levitite",
+    "aeronautics_dyeable_components:brown_levitite",
+    "aeronautics_dyeable_components:lime_levitite",
+    "aeronautics_dyeable_components:light_gray_levitite",
+    "aeronautics_dyeable_components:gray_levitite",
+    "aeronautics_dyeable_components:magenta_levitite",
+    "aeronautics_dyeable_components:cyan_levitite",
+    "aeronautics_dyeable_components:pink_levitite"
   ]
 }
