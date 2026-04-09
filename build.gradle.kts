@@ -38,10 +38,25 @@ neoForge {
             gameDirectory = project.file("run/server")
         }
 
+        create("data") {
+            data()
+            programArguments.addAll(
+                            "--mod", "aeronautics_dyeable_components",
+                            "--all",
+                            "--output", project.file("src/generated/resources/").absolutePath,
+                            "--existing", project.file("src/main/resources/").absolutePath,
+                            "--existing-mod", "offroad"
+                        )
+        }
+
         configureEach {
             jvmArgument("-Dmixin.debug.export=true")
         }
     }
+}
+
+sourceSets.main {
+    resources.srcDir("src/generated/resources")
 }
 
 dependencies {
