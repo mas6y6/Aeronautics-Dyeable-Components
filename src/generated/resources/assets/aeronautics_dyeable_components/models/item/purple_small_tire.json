@@ -1,0 +1,7 @@
+{
+  "parent": "offroad:item/small_tire/item",
+  "textures": {
+    "tire_0": "aeronautics_dyeable_components:block/tire/tire_0_purple",
+    "tire_1": "aeronautics_dyeable_components:block/tire/tire_1_purple"
+  }
+}
